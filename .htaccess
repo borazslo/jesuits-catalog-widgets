@@ -1,0 +1,22 @@
+# L: L for Last, stop rules from .htaccess
+
+# R:
+
+#	if you use [R] alone, it defaults to sending an HTTP "MOVED TEMPORARILY" redirection, 302
+
+#	301 = "MOVED PERMENENTLY"
+
+#	302 = "MOVED TEMPORARILY", default, [R]
+
+# NC: The [NC] says to check in case insensitive mode
+
+#AllowEncodedSlashes On  
+
+
+
+RewriteEngine On
+
+RewriteRule ^memorial_(.+)_(.+)_(.+)_(.+)_(.+)\.js$ /jesuits-catalog-widgets/memorial_js.php?theme=$1&width=$2&height=$3&color=$4&filter=$5 [L,NC]
+
+
+
